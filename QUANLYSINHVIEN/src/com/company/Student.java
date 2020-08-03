@@ -6,8 +6,6 @@ import java.util.Scanner;
 
 public class Student {
     private Integer id;
-    private String username;
-    private String password;
     private String name;
     private Integer age;
     private String address;
@@ -17,10 +15,8 @@ public class Student {
 
     }
 
-    public Student(Integer id, String username, String password, String name, Integer age, String address, Float gpa) {
+    public Student(Integer id, String name, Integer age, String address, Float gpa) {
         this.id = id;
-        this.username = username;
-        this.password = password;
         this.name = name;
         this.age = age;
         this.address = address;
@@ -57,22 +53,6 @@ public class Student {
         return name;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -105,8 +85,6 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +

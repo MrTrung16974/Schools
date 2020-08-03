@@ -45,7 +45,7 @@ public class StudentManager{
 
     public Student editStudent(Integer id) {
         Student student = findSingleStudent(id);
-        if(student != null) {
+        if(student.getId() != null) {
             this.lstStudent.remove(student);
             Student newStudent = inputEditStudent();
             if(newStudent.getName() != null) {
@@ -61,14 +61,18 @@ public class StudentManager{
                 student.setGpa(newStudent.getGpa());
             }
             this.lstStudent.add(student);
+        }else {
+            student = null;
         }
         return student;
     }
 
     public List<Student> deleteStudent(Integer id) {
         Student student = findSingleStudent(id);
-        if(student != null) {
+        if(student.getId() != null) {
             this.lstStudent.remove(student);
+        }else {
+            student = null;
         }
         return this.lstStudent;
     }

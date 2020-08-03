@@ -42,7 +42,12 @@ public class Main {
                     }else {
                         System.out.println("Hãy nhập vào id sinh viên mà bạn muốn sửa : ");
                         int id = manager.inputNumber();
-                        System.out.println("Sinh viên được sửa là : \n" + manager.editStudent(id));
+                        Student exitEditStudent = manager.editStudent(id);
+                        if(exitEditStudent == null) {
+                            System.out.println("Sinh viên không tồn tại!");
+                        }else {
+                            System.out.println("Sinh viên được sửa là : \n" + exitEditStudent);
+                        }
                     }
                     break;
                 case 3:
@@ -54,7 +59,12 @@ public class Main {
                     }else {
                         System.out.println("Hãy nhập vào id sách mà bạn muốn xóa : ");
                         int id = manager.inputNumber();
-                        System.out.println("Danh sách sau khi xóa sinh viên mà bạn là : \n" + manager.deleteStudent(id));
+                        List<Student> exitDeleteStudent = manager.deleteStudent(id);
+                        if(exitDeleteStudent == null) {
+                            System.out.println("Sinh viên không tồn tại!");
+                        }else {
+                            System.out.println("Danh sách sau khi xóa sinh viên mà bạn là : \n" + exitDeleteStudent);
+                        }
                     }
                     break;
                 case 4:
