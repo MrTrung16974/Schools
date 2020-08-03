@@ -67,14 +67,14 @@ public class StudentManager{
         return student;
     }
 
-    public List<Student> deleteStudent(Integer id) {
+    public Student deleteStudent(Integer id) {
         Student student = findSingleStudent(id);
         if(student.getId() != null) {
             this.lstStudent.remove(student);
         }else {
             student = null;
         }
-        return this.lstStudent;
+        return student;
     }
 
     //    nhâp number

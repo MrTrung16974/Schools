@@ -59,11 +59,11 @@ public class Main {
                     }else {
                         System.out.println("Hãy nhập vào id sách mà bạn muốn xóa : ");
                         int id = manager.inputNumber();
-                        List<Student> exitDeleteStudent = manager.deleteStudent(id);
+                        Student exitDeleteStudent = manager.deleteStudent(id);
                         if(exitDeleteStudent == null) {
                             System.out.println("Sinh viên không tồn tại!");
                         }else {
-                            System.out.println("Danh sách sau khi xóa sinh viên mà bạn là : \n" + exitDeleteStudent);
+                            System.out.println("Sinh viên mà bạn muốn xóa là : \n" + exitDeleteStudent);
                         }
                     }
                     break;
